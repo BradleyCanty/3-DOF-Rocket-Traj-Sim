@@ -1,4 +1,4 @@
-# 3-DOF-Rocket-Traj-Sim
+# 3-DOF Rocket Trajectory Simulation Exercises
 This is a step-by-step tutorial for creating a 3-DOF rocket trajectory simulation in Python. It begins by comparing a numerical simulation of 1D rocket motion with the Tsiolkovsky rocket equation, and concludes with a desktop application that takes a user-supplied rocket specification (launch location, launch azimuth, launch time, mass parameters per stage, engine parameters per stage, desired burnout flight path angle per stage, payload mass, etc.) and outputs... 
 1) plots showing the rocket's trajectory metrics
 2) an interactive 3D visualization of the rocket's trajectory over the Earth
@@ -33,69 +33,27 @@ Each exercise has an associated main file (rocket_traj_sim_ex.py):
 
 **[TO DO]Additionally, a PowerPoint presentation and suggested reading are supplied for each exercise.**
 
-Outline of Exercises:
- # | DESCRIPTION:
-
- 1 | Simulate the 1-D motion of V2 rocket in absence of outside forces using Euler
-   | numerical integration method. Compare results with those of the Tsiolkovsky
-   | rocket equation.
-
-
- 2 | Modify exercise 1 to apply constant gravity and a thrust cutoff when
-   | propellant is expended
-
-
- 3 | Apply altitude-dependent gravity, and solve the system of ODEs using midpoint
-   | method and 4th order Runge Kutta method
-
-
- 4 | Add in the effects of drag using a constant drag coefficient Cd = 0.125
-
-
- 5 | Compute air density as a function of altitude using the isothermal barometric
-   | formula. Compare this model to tabulated U.S. Standard Atmosphere data
-   | (https://www.engineeringtoolbox.com/standard-atmosphere-d_604.html#gsc.tab=0)
-   | to verify that it's suitable for our use.
-
-
- 6 | Simulate the trajectory of the rocket using the altitude-varying air density
-
-
- 7 | Fit speed of sound versus altitude data with piecewise continuous lines.
-   | Additionally, fit drag coefficient vs Mach number data (derived from V2 wind 
-   | tunnel tests) with a natural cubic spline.
-
-
- 8 | Implement the Mach number-varying drag coefficient in the 1D rocket
-   | trajectory simulation using the curve fits from the previous exercise.
-
-
- 9 | Extend the rocket trajectory simulation from 1D to 2D, and implement a pitch
-   | program to initiate a gravity turn. Additionally, make plots of...
-   | 	- altitude versus downrange distance
-   |    - flight path angle vs time
-   |    - velocity vs time
-   |    - acceleration vs time
-   |    - dynamic pressure vs time
-   |    - mass vs time
-   |    - trajectory and limb of earth
-
-
-10 | Starting from the previous exercise and assuming an Earth Centered Inertial
-   | frame, apply the velocity of the rocket relative to the Earth's rotating
-   | atmosphere. This involves reformulating the flight path angle calculation.
-
-
-11 | Organize the code to instantiate a 'rocket' object for each simulation.
-   | Organize the plotting functionality such that plots are generated using
-   | method calls on the rocket objects. Additionally, extend the code to handle
-   | rockets with multiple stages. Finally, make a plot showing the trajectory of
-   | a multi-stage rocket.
-
-
-12 | Split the rocket trajectory flight into phases and show the phases in the
-   | plots. This will make it easier to discern what's going on:
-   | Stage 1:
+## Outline of Exercises:
+1) Simulate the 1-D motion of V2 rocket in absence of outside forces using Euler numerical integration method. Compare results with those of the Tsiolkovsky rocket equation.
+2) Modify exercise 1 to apply constant gravity and a thrust cutoff when propellant is expended
+3) Apply altitude-dependent gravity, and solve the system of ODEs using midpoint method and 4th order Runge Kutta method
+4) Add in the effects of drag using a constant drag coefficient Cd = 0.125
+5) Compute air density as a function of altitude using the isothermal barometric formula. Compare this model to tabulated U.S. Standard Atmosphere data (https://www.engineeringtoolbox.com/standard-atmosphere-d_604.html#gsc.tab=0) to verify that it's suitable for our use.
+6) Simulate the trajectory of the rocket using the altitude-varying air density
+7) Fit speed of sound versus altitude data with piecewise continuous lines. Additionally, fit drag coefficient vs Mach number data (derived from V2 wind tunnel tests) with a natural cubic spline.
+8) Implement the Mach number-varying drag coefficient in the 1D rocket trajectory simulation using the curve fits from the previous exercise.
+9) Extend the rocket trajectory simulation from 1D to 2D, and implement a pitch program to initiate a gravity turn. Additionally, make plots of...
+   * altitude versus downrange distance
+   * flight path angle vs time
+   * velocity vs time
+   * acceleration vs time
+   * dynamic pressure vs time
+   * mass vs time
+   * trajectory and limb of earth
+10) Starting from the previous exercise and assuming an Earth Centered Inertial frame, apply the velocity of the rocket relative to the Earth's rotating atmosphere. This involves reformulating the flight path angle calculation.
+11) Organize the code to instantiate a 'rocket' object for each simulation. Organize the plotting functionality such that plots are generated using method calls on the rocket objects. Additionally, extend the code to handle rockets with multiple stages. Finally, make a plot showing the trajectory of a multi-stage rocket.
+12) Split the rocket trajectory flight into phases and show the phases in the plots. This will make it easier to discern what's going on:
+     Stage 1:
    | 	- vertical flight
    |    - pitch over
    |    - gravity turn
@@ -107,58 +65,35 @@ Outline of Exercises:
    | label the phases using a legend.
 
 
-13 | Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976
-   | specification, then calculate pressure as a function of height, p(h).
-   | Update the density, temperature, and speed of sound calculations to use this
-   | more accurate atmospheric model.
-   |
-   | Additionally, update the rocket thrust equation to account for the change in
-   | atmospheric pressure, that is, account for the "pressure thrust".
-   | The current rocket thrust equation only uses mass flow rate, m_dot, and
-   | exhaust velocity, v_exhaust:
-   | T = m_dot * v_exhaust
-   | A more physically-accurate rocket thrust equation introduces a term to
-   | account for the change in atmospheric pressure with altitude:
-   | T = m_dot * v_exhaust + (p_exhaust - p(h)) * A_exit
-   | where
-   | p_exhaust = engine exhaust gas pressure at the engine exit plane (i.e. at
-   |             the end of the nozzle)
-   | p(h)      = air pressure as a function of altitude h
-   | A_exit    = area at the engine exit plane (i.e. at the end of the nozzle)
-   |
-   | Update the RocketStage class to have the p_exhaust and A_exit properties
-   | required for computing thrust, then update the thrust terms in the
-   | get_state_dot() function in the numerical_tools.py file
+13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".
+The current rocket thrust equation only uses mass flow rate, m_dot, and exhaust velocity, v_exhaust:
+
+T = m_dot * v_exhaust
+
+A more physically-accurate rocket thrust equation introduces a term to account for the change in atmospheric pressure with altitude:
+
+T = m_dot * v_exhaust + (p_exhaust - p(h)) * A_exit
+where
+p_exhaust = engine exhaust gas pressure at the engine exit plane (i.e. at
+             the end of the nozzle)
+p(h)      = air pressure as a function of altitude h
+A_exit    = area at the engine exit plane (i.e. at the end of the nozzle)
+
+Update the RocketStage class to have the p_exhaust and A_exit properties
+required for computing thrust, then update the thrust terms in the
+get_state_dot() function in the numerical_tools.py file
 
 
-14 | Implement the following coordinate transformations:
-   | 	- LLA to ECI
-   |    - ECI to LLA
-   |    - LLA to ECEF
-   |    - ECEF to LLA
-   |
-   | Implement the launch location by starting in the Latitude, Longitude,
-   | Altitude (LLA) frame, converting it to the Earth Centered, Earth Fixed (ECEF)
-   | frame, and then converting it to the Earth Centered Inertial (ECI) frame.
-   |
-   | Additionally, change the figure of Earth from sphere to WGS84 ellipsoid, and
-   | update the calculations for ground range to use Vincenty's inverse formula.
-   |
-   | Finally, create the following plots to show the rocket's flight in the ECEF
-   | frame:
-   |    - 'Trajectory Metrics (ECEF frame)'
-   |    - 'Trajectory Across Limb of Earth (ECEF frame)'
+14) Implement the following coordinate transformations:
+    * LLA to ECI
+    * ECI to LLA
+    * LLA to ECEF
+    * ECEF to LLA
+    
+    Implement the launch location by starting in the Latitude, Longitude, Altitude (LLA) frame, converting it to the Earth Centered, Earth Fixed (ECEF) frame, and then converting it to the Earth Centered Inertial (ECI) frame. Additionally, change the figure of Earth from sphere to WGS84 ellipsoid, and update the calculations for ground range to use Vincenty's inverse formula. Finally, create the following plots to show the rocket's flight in the ECEF frame:
+ * 'Trajectory Metrics (ECEF frame)'
+ * 'Trajectory Across Limb of Earth (ECEF frame)'
 
-
-15 | Extend the simulation from 2 dimensions to 3 dimensions, and plot a
-   | rocket trajectory on a 3D globe.
-
-
-16 | Implement a launch azimuth by converting from ECI to a topocentric-horizon
-   | frame (e.g. SEZ), applying the azimuth rotation to the velocity vector, and
-   | then converting it back to ECI. Finally, show the trajectory of a rocket
-   | having a non-zero launch azimuth on a 3D globe.
-
-
-17 | Create a GUI for user input and display of outputs, then package the program
-   | into an executable using Pyinstaller.
+15) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
+16) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. SEZ), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe.
+17) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller.
