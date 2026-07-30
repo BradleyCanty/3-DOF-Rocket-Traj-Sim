@@ -69,6 +69,7 @@ To install the dependencies, install them using the 'requirements.txt' file:
     For j in remaining stages:
     1) jth stage burn
     2) jth engine cutoff
+
 Update all plots to show the trajectory colored by the flight phases, and label the phases using a legend.
 13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".
 The current rocket thrust equation only uses mass flow rate, m_dot, and exhaust velocity, v_exhaust:\
