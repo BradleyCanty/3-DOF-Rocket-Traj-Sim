@@ -71,6 +71,7 @@ To install the dependencies, install them using the 'requirements.txt' file:
     2) jth engine cutoff
 
 Update all plots to show the trajectory colored by the flight phases, and label the phases using a legend.
+
 13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".
 The current rocket thrust equation only uses mass flow rate, m_dot, and exhaust velocity, v_exhaust:\
 T = m_dot * v_exhaust\
@@ -81,6 +82,7 @@ p_exhaust = engine exhaust gas pressure at the engine exit plane (i.e. at the en
 p(h)      = air pressure as a function of altitude h
 A_exit    = area at the engine exit plane (i.e. at the end of the nozzle)\
 Update the RocketStage class to have the p_exhaust and A_exit properties required for computing thrust, then update the thrust terms in the get_state_dot() function in the numerical_tools.py file
+
 14) Implement the following coordinate transformations:
     * LLA to ECI
     * ECI to LLA
