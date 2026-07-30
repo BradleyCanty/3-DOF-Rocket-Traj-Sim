@@ -31,6 +31,13 @@ Each exercise has an associated main file (rocket_traj_sim_ex.py):
 * the header 'Description' section contains instructions for completing the exercise
 * the body contains the solution to the exercise; as a student it is incumbent on you to attempt a solution on your own: if you get stuck, simply refer to the working code
 
+How to Install Dependencies using the 'requirements.txt' File
+1) Open your terminal or command prompt
+2) Navigate to the directory containing the file using cd path/to/project
+3) Activate a new virtual environment for this project (strongly recommended to avoid messing up your global Python installation)
+5) Run the installation command:
+   pip install -r requirements.txt
+
 **[TO DO]Additionally, a PowerPoint presentation and suggested reading are supplied for each exercise.**
 
 ## Outline of Exercises:
