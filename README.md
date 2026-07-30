@@ -70,7 +70,7 @@ To install the dependencies, install them using the 'requirements.txt' file:
    - ith stage burn
    - ith engine cutoff
 Update all plots to show the trajectory colored by the flight phases, and label the phases using a legend.
-14) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".
+13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".
 The current rocket thrust equation only uses mass flow rate, m_dot, and exhaust velocity, v_exhaust:\
 T = m_dot * v_exhaust\
 A more physically-accurate rocket thrust equation introduces a term to account for the change in atmospheric pressure with altitude:\
@@ -80,7 +80,7 @@ p_exhaust = engine exhaust gas pressure at the engine exit plane (i.e. at the en
 p(h)      = air pressure as a function of altitude h
 A_exit    = area at the engine exit plane (i.e. at the end of the nozzle)\
 Update the RocketStage class to have the p_exhaust and A_exit properties required for computing thrust, then update the thrust terms in the get_state_dot() function in the numerical_tools.py file
-15) Implement the following coordinate transformations:
+14) Implement the following coordinate transformations:
     * LLA to ECI
     * ECI to LLA
     * LLA to ECEF
@@ -90,6 +90,6 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
     * 'Trajectory Metrics (ECEF frame)'
     * 'Trajectory Across Limb of Earth (ECEF frame)'
 
-16) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
-17) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. SEZ), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe.
-18) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller.
+15) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
+16) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. SEZ), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe.
+17) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller.
