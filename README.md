@@ -5,7 +5,7 @@ This is a step-by-step tutorial for creating a 3-DOF rocket trajectory simulatio
 2) an interactive 3D visualization of the rocket's trajectory over the Earth
 
 ## Learning Objectives
-Upon completion, the student should be able to...
+Upon completion, you should be able to...
 1) understand rocket motion and how orbit is achieved
 2) understand how rocket motion is modeled in a computer
 3) understand the reference frames and coordinate systems used in astrodynamics
