@@ -94,5 +94,5 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
     * 'Trajectory Across Limb of Earth (ECEF frame)'
 
 15) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
-16) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. SEZ), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe.
+16) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. SEZ), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Additionally, rework the pitch program so that the steering vector is applied in the topocentric-horizon frame along the current azimuth. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe and generate a 2D ground trace plot using latitude, longitude, and time data.
 17) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller.
