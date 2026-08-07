@@ -45,7 +45,7 @@ Install the dependencies using the 'requirements.txt' file:
    * dynamic pressure vs time
    * mass vs time
    * trajectory and limb of earth
- 9) Starting from the previous exercise, replace the initial offset from vertical with a vertical lift-off followed by a pitch over (i.e. implement a "pitch program"). Additionally, make the same plots a before.
+ 9) Starting from the previous exercise, replace the initial offset from vertical with a vertical lift-off followed by a pitch over (i.e. implement a "pitch program"). Additionally, make the same plots as before.
 10) Assuming an Earth Centered Inertial frame in the simulation we've built so far, apply the velocity of the rocket relative to the Earth's rotating atmosphere. This involves reformulating the flight path angle calculation.
 11) Organize the code to instantiate a 'rocket' object for each simulation. Organize the plotting functionality such that plots are generated using method calls on the rocket objects. Additionally, extend the code to handle rockets with multiple stages. Finally, make a plot showing the trajectory of a multi-stage rocket.
 12) Split the rocket trajectory flight into phases and show the phases in the plots. This will make it easier to discern what's going on:\
