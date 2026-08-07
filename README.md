@@ -20,7 +20,6 @@ All exercises are implemented in python and are available in the GitHub repo.
 Each exercise has an associated main file (rocket_traj_sim_ex.py):
 * the header 'Description' section contains instructions for completing the exercise
 * the body contains the solution to the exercise; as a student it is incumbent on you to attempt a solution on your own: if you get stuck, simply refer to the working code
-**[TO DO]Additionally, a PowerPoint presentation and suggested reading are supplied for each exercise.**
 
 Install the dependencies using the 'requirements.txt' file:
 1) Open your terminal or command prompt
@@ -29,8 +28,6 @@ Install the dependencies using the 'requirements.txt' file:
 5) Activate a new virtual environment for this project (strongly recommended to avoid messing up your global Python installation)
 6) Run the installation command:\
    pip install -r requirements.txt
-
-Each exercise has its own directory containing the solution scripts, with the main file being named 'rocket_traj_sim_exN.py'. The final program is in the executable file.
 
 ## Outline of Exercises
 1) Simulate the 1-D motion of V2 rocket in absence of outside forces using Euler numerical integration method. Compare results with those of the Tsiolkovsky rocket equation.
