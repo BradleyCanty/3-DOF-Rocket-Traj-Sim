@@ -89,7 +89,8 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
 
 ## Possible Future Extensions
 1) Add ICBM targeting: specify lat and lon of launch point and lat and lon of impact point, and compute ICBM's required altitude, velocity, and flight path angle (these determine the state vector at burnout)
-2) Simulate ICBM intercept using interceptor with kill vehicle having Lambert intercept guidance (assume perfect knowledge of threat state vector)
-3) Add noise to ICBM state vector, then extend kill vehicle's Lambert intercept guidance solution with proportional navigation homing to null the Predicted Intercept Point errors
+2) Extend simulation from 3-DOF to 6-DOF
+3) Simulate ICBM intercept using interceptor with kill vehicle having Lambert intercept guidance (assume perfect knowledge of threat state vector)
+4) Add noise to ICBM state vector, then extend kill vehicle's Lambert intercept guidance solution with proportional navigation homing to null the Predicted Intercept Point errors
 
 
