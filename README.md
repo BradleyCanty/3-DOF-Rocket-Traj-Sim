@@ -86,3 +86,10 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
 17) Compute the six classical orbital elements from the state vector at burnout
 18) Simulate the effects of Earth's oblateness on the rocket's motion by implementing J2 gravity
 19) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller
+
+## Possible Future Extensions
+1) Add ICBM targeting: specify lat and lon of launch point and lat and lon of impact point, and compute ICBM's required altitude, velocity, and flight path angle (these determine the state vector at burnout)
+2) Simulate ICBM intercept using interceptor with kill vehicle having Lambert intercept guidance (assume perfect knowledge of threat state vector)
+3) Add noise to ICBM state vector, then extend kill vehicle's Lambert intercept guidance solution with proportional navigation homing to null the Predicted Intercept Point errors
+
+
