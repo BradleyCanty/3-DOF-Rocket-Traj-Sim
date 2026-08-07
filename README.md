@@ -49,7 +49,7 @@ To install the dependencies, install them using the 'requirements.txt' file:
 5) Compute air density as a function of altitude using the isothermal barometric formula. Then, simulate the trajectory of the rocket using this altitude-varying air density formula.
 6) Fit speed of sound versus altitude data with piecewise continuous lines. Additionally, fit drag coefficient vs Mach number data (derived from V2 wind tunnel tests) with a natural cubic spline.
 7) Implement the Mach number-varying drag coefficient in the 1D rocket trajectory simulation using the curve fits from the previous exercise.
-8) Extend the rocket trajectory simulation from 1D to 2D, and use an initial offset from vertical to initiate a gravity turn. Additionally, make plots of...
+8) Extend the rocket trajectory simulation from 1D to 2D, and apply an initial offset from vertical to initiate a gravity turn. Additionally, make plots of...
    * altitude versus downrange distance
    * flight path angle vs time
    * velocity vs time
