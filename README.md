@@ -46,11 +46,10 @@ To install the dependencies, install them using the 'requirements.txt' file:
 2) Modify exercise 1 to apply constant gravity and a thrust cutoff when propellant is expended
 3) Apply altitude-dependent gravity, and solve the system of ODEs using midpoint method and 4th order Runge Kutta method
 4) Add in the effects of drag using a constant drag coefficient Cd = 0.125
-5) Compute air density as a function of altitude using the isothermal barometric formula. Compare this model to tabulated U.S. Standard Atmosphere data (https://www.engineeringtoolbox.com/standard-atmosphere-d_604.html#gsc.tab=0) to verify that it's suitable for use
-6) Simulate the trajectory of the rocket using the altitude-varying air density
-7) Fit speed of sound versus altitude data with piecewise continuous lines. Additionally, fit drag coefficient vs Mach number data (derived from V2 wind tunnel tests) with a natural cubic spline.
-8) Implement the Mach number-varying drag coefficient in the 1D rocket trajectory simulation using the curve fits from the previous exercise.
-9) Extend the rocket trajectory simulation from 1D to 2D, and implement a pitch program to initiate a gravity turn. Additionally, make plots of...
+5) Compute air density as a function of altitude using the isothermal barometric formula. Then, simulate the trajectory of the rocket using this altitude-varying air density formula.
+6) Fit speed of sound versus altitude data with piecewise continuous lines. Additionally, fit drag coefficient vs Mach number data (derived from V2 wind tunnel tests) with a natural cubic spline.
+7) Implement the Mach number-varying drag coefficient in the 1D rocket trajectory simulation using the curve fits from the previous exercise.
+8) Extend the rocket trajectory simulation from 1D to 2D, and use an initial offset from vertical to initiate a gravity turn. Additionally, make plots of...
    * altitude versus downrange distance
    * flight path angle vs time
    * velocity vs time
@@ -58,7 +57,8 @@ To install the dependencies, install them using the 'requirements.txt' file:
    * dynamic pressure vs time
    * mass vs time
    * trajectory and limb of earth
-10) Starting from the previous exercise and assuming an Earth Centered Inertial frame, apply the velocity of the rocket relative to the Earth's rotating atmosphere. This involves reformulating the flight path angle calculation.
+ 9) Starting from the previous exercise, replace the initial offset from vertical with a vertical lift-off followed by a pitch over (i.e. implement a "pitch program"). Additionally, make the same plots a before.
+10) Assuming an Earth Centered Inertial frame in the simulation we've built so far, apply the velocity of the rocket relative to the Earth's rotating atmosphere. This involves reformulating the flight path angle calculation.
 11) Organize the code to instantiate a 'rocket' object for each simulation. Organize the plotting functionality such that plots are generated using method calls on the rocket objects. Additionally, extend the code to handle rockets with multiple stages. Finally, make a plot showing the trajectory of a multi-stage rocket.
 12) Split the rocket trajectory flight into phases and show the phases in the plots. This will make it easier to discern what's going on:\
     Stage 1:
