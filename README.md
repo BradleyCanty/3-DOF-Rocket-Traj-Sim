@@ -13,7 +13,7 @@ Upon completion you should be able to...
 5) understand how Earth's oblateness affects the rocket's motion
 
 ## Simulation Architecture
-
+[COMPLETE THIS SECTION]
 
 ## Usage and Installation
 All exercises are implemented in python and are available in the GitHub repo.
