@@ -5,15 +5,16 @@ This is a step-by-step tutorial for creating a 3-DOF rocket trajectory simulatio
 2) an interactive 3D visualization of the rocket's trajectory over an oblate, rotating Earth with J2 gravity
 
 ## Learning Objectives
-Upon completion, you should be able to...
-1) understand rocket motion and how orbit is achieved
-2) understand how rocket motion is modeled in a computer
+Upon completion you should be able to...
+1) formulate the equations of motion for a rocket
+2) solve the equations of motion to get position and velocity
 3) understand the reference frames and coordinate systems used in astrodynamics
-4) formulate the equations of motion for a rocket, and solve them to get position and velocity
-5) compute the six classical orbital elements from a rocket's state vector at burnout
+4) compute the six classical orbital elements from a rocket's state vector at burnout
+5) understand how Earth's oblateness affects the rocket's motion
 
 ## Simulation Architecture
- 
+
+
 ## Usage and Installation
 All exercises are implemented in python and are available in the GitHub repo.
 Each exercise has an associated main file (rocket_traj_sim_ex.py):
@@ -21,7 +22,7 @@ Each exercise has an associated main file (rocket_traj_sim_ex.py):
 * the body contains the solution to the exercise; as a student it is incumbent on you to attempt a solution on your own: if you get stuck, simply refer to the working code
 **[TO DO]Additionally, a PowerPoint presentation and suggested reading are supplied for each exercise.**
 
-To install the dependencies, install them using the 'requirements.txt' file:
+Install the dependencies using the 'requirements.txt' file:
 1) Open your terminal or command prompt
 2) Navigate to the directory containing the file:\
    cd path/to/project
