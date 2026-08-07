@@ -30,6 +30,8 @@ Install the dependencies using the 'requirements.txt' file:
 6) Run the installation command:\
    pip install -r requirements.txt
 
+Each exercise has its own directory containing the solution scripts, with the main file being named 'rocket_traj_sim_exN.py'. The final program is in the executable file.
+
 ## Outline of Exercises
 1) Simulate the 1-D motion of V2 rocket in absence of outside forces using Euler numerical integration method. Compare results with those of the Tsiolkovsky rocket equation.
 2) Modify exercise 1 to apply constant gravity and a thrust cutoff when propellant is expended
