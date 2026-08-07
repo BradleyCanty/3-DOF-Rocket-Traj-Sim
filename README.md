@@ -41,7 +41,7 @@ To install the dependencies, install them using the 'requirements.txt' file:
 6) Run the installation command:\
    pip install -r requirements.txt
 
-## Outline of Exercises:
+## Outline of Exercises
 1) Simulate the 1-D motion of V2 rocket in absence of outside forces using Euler numerical integration method. Compare results with those of the Tsiolkovsky rocket equation.
 2) Modify exercise 1 to apply constant gravity and a thrust cutoff when propellant is expended
 3) Apply altitude-dependent gravity, and solve the system of ODEs using midpoint method and 4th order Runge Kutta method
