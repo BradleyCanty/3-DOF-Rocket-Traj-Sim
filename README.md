@@ -7,9 +7,9 @@ This is a step-by-step tutorial for creating a 3-DOF rocket trajectory simulatio
 ## Learning Objectives
 Upon completion you should be able to...
 1) formulate the equations of motion for a rocket
-2) solve the equations of motion to get position and velocity
+2) solve the equations of motion to get position and velocity at every time step along its trajectory
 3) understand the reference frames and coordinate systems used in astrodynamics
-4) compute the six classical orbital elements from a rocket's state vector at burnout
+4) compute the six classical orbital elements from the rocket's state vector at burnout
 5) understand how Earth's oblateness affects the rocket's motion
 
 ## Simulation Architecture
