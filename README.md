@@ -88,9 +88,9 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
 19) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller
 
 ## Possible Future Extensions
-1) Add ICBM targeting: specify lat and lon of launch point and lat and lon of impact point, and compute ICBM's required altitude, velocity, and flight path angle (these determine the state vector at burnout)
-2) Extend simulation from 3-DOF to 6-DOF
-3) Simulate ICBM intercept using interceptor with kill vehicle having Lambert intercept guidance (assume perfect knowledge of threat state vector)
-4) Add noise to ICBM state vector, then extend kill vehicle's Lambert intercept guidance solution with proportional navigation homing to null the Predicted Intercept Point errors at endgame
+1) Add ICBM targeting: specify lat and lon of launch point and lat and lon of impact point, and compute ICBM's required altitude, velocity, and flight path angle at final stage burnout
+2) Extend simulation from 3-DOF to 6-DOF. Must account for rocket body inertia, CG, CP.
+3) Simulate ICBM intercept using interceptor rocket with kill vehicle payload. Use Lambert intercept guidance and assume perfect knowledge of threat state vector at burnout, i.e., the Predicted Intercept Point is the intercept point, so kill vehicle need not maneuver at all to hit the target (Zero Effort Miss distance is zero)
+4) Add noise to ICBM state vector, then extend the interceptor's Lambert intercept guidance solution with proportional navigation, i.e., kill vehicle must null the Predicted Intercept Point errors at endgame using its divert and attitude control thrusters
 
 
