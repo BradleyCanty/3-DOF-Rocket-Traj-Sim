@@ -8,7 +8,7 @@ This is a step-by-step tutorial for creating a 3-degree-of-freedom rocket trajec
 1) plots showing the rocket's trajectory metrics
 2) an interactive 3D visualization of the rocket's trajectory over an oblate, rotating Earth
 
-**(Note: exercises 16,17,18, and 19 still in progress as of 2026/08/09)**
+**(Note: exercises 16,17,18, and 19 are still being implemented as of 2026/08/09)**
 ## Learning Objectives
 Upon completion you should be able to...
 1) formulate the equations of motion for a rocket
