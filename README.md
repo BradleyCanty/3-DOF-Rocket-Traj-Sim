@@ -1,7 +1,6 @@
 # 3-DOF Rocket Trajectory Simulation Tutorial
 
-https://github.com/user-attachments/assets/0595127a-c268-4113-ab8b-afc22124657c
-
+https://github.com/user-attachments/assets/1c6d2187-794e-4bf5-b834-6535861e77e0
 
 ## Summary
 This is a step-by-step tutorial for creating a 3-degree-of-freedom rocket trajectory simulation in Python. It begins by comparing a numerical simulation of 1D rocket motion with the Tsiolkovsky rocket equation, and concludes with a desktop application that takes rocket properties as input (launch location, launch azimuth, launch time, mass parameters per stage, engine parameters per stage, desired burnout flight path angle per stage, payload mass, etc.) and outputs... 
