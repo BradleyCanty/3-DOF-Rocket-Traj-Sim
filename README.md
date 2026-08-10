@@ -17,6 +17,15 @@ Upon completion you should be able to...
 4) compute the six classical orbital elements from the rocket's state vector at burnout
 5) understand how Earth's oblateness affects the rocket's motion
 
+## Simulation Assumptions
+- Earth is an oblate spheroid (WGS84)
+- There is no precession or nutation of spinning Earth
+- Angular velocity of Earth is constant
+- The atmosphere rotates with the same angular velocity as Earth
+- The rocket does not generate lift force
+- The rocket motor produces a constant and instantaneous exhaust velocity
+- The rocket motor exhaust velocity becomes zero at the instant of propellant depletion
+
 ## Simulation Architecture
 [COMPLETE THIS SECTION]
 
