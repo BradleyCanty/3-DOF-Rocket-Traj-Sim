@@ -30,7 +30,7 @@ Upon completion you should be able to...
 
 ## Usage and Installation
 All exercises are implemented in python and are available in the GitHub repo.
-Each exercise has an associated main file (rocket_traj_sim_ex.py):
+Each exercise has an associated main file (rocket_traj_sim_exXX.py):
 * the header 'Description' section contains instructions for completing the exercise
 * the body contains the solution to the exercise; as a student it is incumbent on you to attempt a solution on your own: if you get stuck, simply refer to the working code
 
