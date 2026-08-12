@@ -17,6 +17,7 @@ Upon completion you should be able to...
 5) understand how Earth's oblateness affects the rocket's motion
 
 ## Simulation Assumptions
+- Rocket is modeled as a point mass (i.e., no yaw, pitch, or roll)
 - Earth is an oblate spheroid (WGS84)
 - There is no precession or nutation of spinning Earth
 - Angular velocity of Earth is constant
