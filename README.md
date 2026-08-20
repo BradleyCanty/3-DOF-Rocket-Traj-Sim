@@ -76,10 +76,8 @@ Upon completion you should be able to...
   * Midpoint
   * 4th Order Runge-Kutta (RK4)
 
----
-
-## 3. Architecture & Data Flow
-[PUT IMAGE HERE]
+### Architecture & Data Flow:
+<img width="2890" height="1572" alt="Rocket_Traj_Sim_Architecture_Img" src="https://github.com/user-attachments/assets/017985b5-8e31-4a3a-8f62-86fda7a4cecd" />
 
 ## Usage and Installation
 All exercises are implemented in python and are available in the GitHub repo.
