@@ -27,7 +27,59 @@ Upon completion you should be able to...
 - The rocket motor exhaust velocity becomes zero at the instant of propellant depletion
 
 ## Simulation Architecture
-[COMPLETE THIS SECTION]
+
+### Thrust Model
+* **Basic:** 
+  $$T = \dot{m} v_e$$
+* **With pressure thrust term:** 
+  $$T = \dot{m} v_e + (p_e - p(h)) A_{\text{exit}}$$
+
+### Drag Model
+* $$D = \frac{1}{2} \rho v^2 A C_D$$
+  * **With constant drag coefficient:** $C_D = \text{const.}$
+  * **With drag coefficient varying with Mach number:** $C_D = f(\text{M})$
+
+### Gravity Model
+* **Constant acceleration:** 
+  $$a_{\text{g}} = 9.81 \text{ [m/s}^2\text{]}$$
+* **Altitude-varying acceleration:** 
+  $$a_{\text{g}}(h) = \frac{GM}{(R_{Earth} + h)^2}$$
+* **2-body acceleration (Keplerian Orbit):** 
+  $$\mathbf{a}_{\text{gravity}} = -\frac{GM}{r^3} \mathbf{r}$$
+
+### Earth Surface Model
+* **Sphere:** $R_{Earth} = \text{const.}$
+* **Oblate Spheroid:** WGS84 ellipsoid
+
+### Atmosphere Model
+* **Constant air density:** $\rho = \text{const.}$
+* **Altitude-varying air density:** $\rho = f(h)$ *(U.S. Standard Atmosphere 1976)*
+
+### Equations of Motion
+* **Acceleration:** 
+  $$\frac{d\mathbf{v}}{dt} = \mathbf{a}_{\text{thrust}} + \mathbf{a}_{\text{drag}} + \mathbf{a}_{\text{gravity}}$$
+  
+* **Mass Flow Rate:** 
+  $$\dot{\mathbf{m}} = -\frac{T}{I_{sp} g_0}$$
+  
+* **State Vector:** 
+  $$\mathbf{x} = (r_x, r_y, r_z, v_x, v_y, v_z)$$
+
+* **Derivative of State Vector:** 
+  $$\dot{\mathbf{x}} = (v_x, v_y, v_z, a_{\text{net}, x}, a_{\text{net}, y}, a_{\text{net}, z})$$
+
+* **Initial State Vector:** 
+  $$\mathbf{x}_0 = (r_{x0}, r_{y0}, r_{z0}, v_{x0}, v_{y0}, v_{z0})$$
+
+### Numerical Integrators:
+  * Euler
+  * Midpoint
+  * 4th Order Runge-Kutta (RK4)
+
+---
+
+## 3. Architecture & Data Flow
+[PUT IMAGE HERE]
 
 ## Usage and Installation
 All exercises are implemented in python and are available in the GitHub repo.
