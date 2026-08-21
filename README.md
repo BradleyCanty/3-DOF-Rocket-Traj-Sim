@@ -81,6 +81,7 @@ Upon completion you should be able to...
 
 ## Usage and Installation
 All exercises are implemented in python and are available in the GitHub repo.
+Most exercises have notes for solving them in their respective directories (Exercise_XX/Exercise_XX_Notes.pdf)
 Each exercise has an associated main file (rocket_traj_sim_exXX.py):
 * the header 'Description' section contains instructions for completing the exercise
 * the body contains the solution to the exercise; as a student it is incumbent on you to attempt a solution on your own: if you get stuck, simply refer to the working code
@@ -94,7 +95,7 @@ Install the dependencies using the 'requirements.txt' file:
    pip install -r requirements.txt
 
 ## Outline of Exercises
-1) Simulate the 1-D motion of V2 rocket in absence of outside forces using Euler numerical integration method. Compare results with those of the Tsiolkovsky rocket equation.
+1) Formulate a 1D model for rocket motion in the absence of outside forces. Using Euler method for numerical integration, compute the velocity of a V2 rocket and compare it with the velocity computed using Tsiolkovsky's rocket equation.
 2) Modify exercise 1 to apply constant gravity and a thrust cutoff when propellant is expended
 3) Apply altitude-dependent gravity, and solve the system of ODEs using midpoint method and 4th order Runge Kutta method
 4) Add in the effects of drag using a constant drag coefficient Cd = 0.125
