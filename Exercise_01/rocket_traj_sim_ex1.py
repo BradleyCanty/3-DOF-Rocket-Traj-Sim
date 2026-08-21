@@ -3,14 +3,10 @@
 rocket_traj_sim_ex1.py
 
 Description:
-    Simulate the motion of the V2 rocket in the absence of outside forces.
-    A V2 rocket has an empty mass of 4000kg and was loaded with 8800kg of fuel. 
-    It burned fuel at 129.4kg/s and had an exhaust velocity of 2050m/s. Use the 
-    last two pieces of information to calculate an effective thrust, and use the 
-    Euler method to solve for the velocity of the rocket in one dimension 
-    in the absence of gravity, noting that it will be changing its mass at each 
-    step. Compare the computed velocity at each time to the results predicted by 
-    the Rocket Equation.
+    Formulate a 1D model for rocket motion in the absence of outside forces. Using 
+    Euler method for numerical integration, compute the velocity of a V2 rocket and 
+    compare it with the velocity computed using Tsiolkovsky's rocket equation.
+    See 'Exercise_01_Notes.pdf' for solution steps.
     
 """
 import numpy as np
