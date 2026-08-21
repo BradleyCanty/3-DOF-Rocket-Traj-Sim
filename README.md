@@ -80,9 +80,7 @@ Upon completion you should be able to...
 <img width="2890" height="1572" alt="Rocket_Traj_Sim_Architecture_Img" src="https://github.com/user-attachments/assets/017985b5-8e31-4a3a-8f62-86fda7a4cecd" />
 
 ## Usage and Installation
-All exercises are implemented in python and are available in the GitHub repo.
-Most exercises have notes for solving them in their respective directories (Exercise_XX/Exercise_XX_Notes.pdf)
-Each exercise has an associated main file (rocket_traj_sim_exXX.py):
+All exercises are implemented in python and are available in the GitHub repo. Most exercises have notes for solving them in their respective directories (Exercise_XX/Exercise_XX_Notes.pdf). Each exercise has an associated main file (rocket_traj_sim_exXX.py):
 * the header 'Description' section contains instructions for completing the exercise
 * the body contains the solution to the exercise; as a student it is incumbent on you to attempt a solution on your own: if you get stuck, simply refer to the working code
 
