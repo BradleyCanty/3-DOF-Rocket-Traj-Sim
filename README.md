@@ -57,7 +57,7 @@ Upon completion you should be able to...
 
 ### Equations of Motion
 * **Acceleration:** 
-  $$\frac{d\mathbf{v}}{dt} = \mathbf{a}_{\text{thrust}} + \mathbf{a}_{\text{drag}} + \mathbf{a}_{\text{gravity}}$$
+  $$\frac{d\mathbf{v}}{dt} = \mathbf{a_{thrust}} + \mathbf{a_{drag}} + \mathbf{a_{gravity}}$$
   
 * **Mass Flow Rate:** 
   $$\dot{\mathbf{m}} = -\frac{T}{I_{sp} g_0}$$
@@ -66,10 +66,10 @@ Upon completion you should be able to...
   $$\mathbf{x} = (r_x, r_y, r_z, v_x, v_y, v_z)$$
 
 * **Derivative of State Vector:** 
-  $$\dot{\mathbf{x}} = (v_x, v_y, v_z, a_{\text{net}, x}, a_{\text{net}, y}, a_{\text{net}, z})$$
+  $$\dot{\mathbf{x}} = (v_x, v_y, v_z, a_{x}, a_{y}, a_{z})$$
 
 * **Initial State Vector:** 
-  $$\mathbf{x}_0 = (r_{x0}, r_{y0}, r_{z0}, v_{x0}, v_{y0}, v_{z0})$$
+  $$\mathbf{x_{0}} =  (r_{x0}, r_{y0}, r_{z0}, v_{x0}, v_{y0}, v_{z0})$$
 
 ### Numerical Integrators:
   * Euler
