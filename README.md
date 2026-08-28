@@ -46,6 +46,7 @@ Upon completion you should be able to...
   $$a_{\text{g}}(h) = \frac{GM}{(R_{Earth} + h)^2}$$
 * **2-body acceleration (Keplerian Orbit):** 
   $$\mathbf{a}_{\text{gravity}} = -\frac{GM}{r^3} \mathbf{r}$$
+* J2 Geopotential Spherical Harmonic Gravity model
 
 ### Earth Surface Model
 * **Sphere:** $R_{Earth} = \text{const.}$
@@ -123,18 +124,21 @@ Install the dependencies using the 'requirements.txt' file:
     
     Update all plots to show the trajectory colored by the flight phases, and label the phases using a legend.
 
-13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".
+13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".\
+\
 The current rocket thrust equation only uses mass flow rate, m_dot, and exhaust velocity, v_exhaust:\
-T = m_dot * v_exhaust\
+$$T = m_{dot} * v_{exhaust}$$\
+\
 A more physically-accurate rocket thrust equation introduces a term to account for the change in atmospheric pressure with altitude:\
-T = m_dot * v_exhaust + (p_exhaust - p(h)) * A_exit\
+$$T = m_{dot} * v_{exhaust} + (p_{exhaust} - p(h)) * A_{exit}$$\
 where\
-p_exhaust = engine exhaust gas pressure at the engine exit plane (i.e. at the end of the nozzle)
-p(h)      = air pressure as a function of altitude h
-A_exit    = area at the engine exit plane (i.e. at the end of the nozzle)\
+$p_{exhaust}$ = engine exhaust gas pressure at the engine exit plane (i.e. at the end of the nozzle)\
+p(h)      = air pressure as a function of altitude h\
+$A_{exit}$    = area at the engine exit plane (i.e. at the end of the nozzle)\
+\
 Update the RocketStage class to have the p_exhaust and A_exit properties required for computing thrust, then update the thrust terms in the get_state_dot() function in the numerical_tools.py file
 
-14) Implement the following coordinate transformations:
+15) Implement the following coordinate transformations:
     * LLA to ECI
     * ECI to LLA
     * LLA to ECEF
@@ -144,11 +148,11 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
     * 'Trajectory Metrics (ECEF frame)'
     * 'Trajectory Across Limb of Earth (ECEF frame)'
 
-15) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
-16) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. North-East-Down), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Additionally, rework the pitch program so that the steering vector is applied in the topocentric-horizon frame along the instantaneous azimuth. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe and generate a 2D ground trace plot using latitude, longitude, and time data.
-17) Compute the six classical orbital elements from the state vector at burnout
-18) Simulate the effects of Earth's oblateness on the rocket's motion by implementing J2 gravity
-19) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller
+16) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
+17) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. North-East-Down), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Additionally, rework the pitch program so that the steering vector is applied in the topocentric-horizon frame along the instantaneous azimuth. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe and generate a 2D ground trace plot using latitude, longitude, and time data.
+18) Compute the six classical orbital elements from the state vector at burnout
+19) Simulate the effects of Earth's oblateness on the rocket's motion by implementing J2 gravity
+20) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller
 
 ## Possible Future Extensions
 1) Add ICBM targeting: specify lat and lon of launch point and lat and lon of impact point, and compute ICBM's required altitude, velocity, and flight path angle at final stage burnout
