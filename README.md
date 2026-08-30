@@ -139,7 +139,7 @@ $A_{exit}$ = area at the engine exit plane (i.e. at the end of the nozzle)\
 \
 Update the RocketStage class to have the p_exhaust and A_exit properties required for computing thrust, then update the thrust terms in the get_state_dot() function in the numerical_tools.py file
 
-15) Implement the following coordinate transformations:
+14) Implement the following coordinate transformations:
     * LLA to ECI
     * ECI to LLA
     * LLA to ECEF
@@ -149,11 +149,11 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
     * 'Trajectory Metrics (ECEF frame)'
     * 'Trajectory Across Limb of Earth (ECEF frame)'
 
-16) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
-17) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. North-East-Down), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Additionally, rework the pitch program so that the steering vector is applied in the topocentric-horizon frame along the instantaneous azimuth. Finally, show the trajectory of a rocket having a non-zero launch azimuth on a 3D globe and generate a 2D ground trace plot using latitude, longitude, and time data.
-18) Compute the six classical orbital elements from the state vector at burnout
-19) Simulate the effects of Earth's oblateness on the rocket's motion by implementing J2 gravity
-20) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller
+15) Extend the simulation from 2 dimensions to 3 dimensions, and plot a rocket trajectory on a 3D globe.
+16) Implement a launch azimuth by converting from ECI to a topocentric-horizon frame (e.g. North-East-Down), applying the azimuth rotation to the velocity vector, and then converting it back to ECI. Additionally, rework the pitch program so that the steering vector is applied in the topocentric-horizon frame along the instantaneous azimuth. Finally, show the trajectory of a rocket having a non-90&deg; launch azimuth on a 3D globe and generate a 2D ground trace plot using latitude, longitude, and time data.
+17) Compute the six classical orbital elements from the state vector at burnout
+18) Simulate the effects of Earth's oblateness on the rocket's motion by implementing J2 gravity
+19) Create a GUI for user input and display of outputs, then package the program into an executable using Pyinstaller
 
 ## Possible Future Extensions
 1) Add ICBM targeting: specify lat and lon of launch point and lat and lon of impact point, and compute ICBM's required altitude, velocity, and flight path angle at final stage burnout
@@ -161,4 +161,5 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
 3) Simulate ICBM intercept using interceptor rocket with kill vehicle payload. Use Lambert intercept guidance and assume perfect knowledge of threat state vector at burnout, i.e., the Predicted Intercept Point is the intercept point, so kill vehicle need not maneuver at all to hit the target (Zero Effort Miss distance is zero)
 4) Add noise to ICBM state vector, then extend the interceptor's Lambert intercept guidance solution with proportional navigation, i.e., kill vehicle must null the Predicted Intercept Point errors at endgame using its divert and attitude control thrusters
 
-
+## Miscellaneous Notes
+* This simulation is implemented in Python since it has syntax that's easy to read and write. The exercises are accessible to a broader audience as a result.
