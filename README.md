@@ -162,4 +162,4 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
 4) Add noise to ICBM state vector, then extend the interceptor's Lambert intercept guidance solution with proportional navigation, i.e., kill vehicle must null the Predicted Intercept Point errors at endgame using its divert and attitude control thrusters
 
 ## Miscellaneous Notes
-* This simulation is implemented in Python since it has syntax that's easy to read and write. The exercises are accessible to a broader audience as a result.
+* This simulation is implemented in Python since it has syntax that's easy to read and write. This makes the exercises accessible to a broader audience.
