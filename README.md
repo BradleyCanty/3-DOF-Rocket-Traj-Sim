@@ -30,31 +30,32 @@ Upon completion you should be able to...
 
 ### Thrust Model
 * **Basic:** 
-  $$T = \dot{m} v_e$$
+  $$T = \dot{m} v_e$$ &emsp; **(Exercise 1 to 12)**
 * **With pressure thrust term:** 
-  $$T = \dot{m} v_e + (p_e - p(h)) A_{\text{exit}}$$
+  $$T = \dot{m} v_e + (p_e - p(h)) A_{\text{exit}}$$ &emsp; **(Exercise 13 onward)**
 
 ### Drag Model
-* $$D = \frac{1}{2} \rho v^2 A C_D$$
-  * **With constant drag coefficient:** $C_D = \text{const.}$
-  * **With drag coefficient varying with Mach number:** $C_D = f(\text{M})$
+* $$D = \frac{1}{2} \rho v^2 A C_d$$
+  * **With constant drag coefficient:** $C_d = \text{const.}$ &emsp; **(Exercise 4)**
+  * **With drag coefficient varying with Mach number:** $C_d = f(\text{M})$ &emsp; **(Exercise 7 onward)**
 
 ### Gravity Model
 * **Constant acceleration:** 
-  $$a_{\text{g}} = 9.81 \text{ [m/s}^2\text{]}$$
+  $$a_{\text{g}} = 9.81 \text{ [m/s}^2\text{]}$$ &emsp; **(Exercise 2)**
 * **Altitude-varying acceleration:** 
-  $$a_{\text{g}}(h) = \frac{GM}{(R_{Earth} + h)^2}$$
+  $$a_{\text{g}}(h) = \frac{GM}{(R_{Earth} + h)^2}$$ &emsp; **(Exercise 3 to 7)**
 * **2-body acceleration (Keplerian Orbit):** 
-  $$\mathbf{a}_{\text{gravity}} = -\frac{GM}{r^3} \mathbf{r}$$
-* J2 Geopotential Spherical Harmonic Gravity model
+  $$\mathbf{a}_{\text{gravity}} = -\frac{GM}{r^3} \mathbf{r}$$ &emsp; **(Exercise 8 to 17)**
+* J2 Geopotential Spherical Harmonic Gravity model &emsp; **(Exercise 18 onward)**
 
 ### Earth Surface Model
-* **Sphere:** $R_{Earth} = \text{const.}$
-* **Oblate Spheroid:** WGS84 ellipsoid
+* **Flat** &emsp; **(Exercise 1 to 7)**
+* **Sphere:** $R_{Earth} = \text{const.}$ &emsp; **(Exercise 8 to 13)**
+* **Oblate Spheroid:** WGS84 ellipsoid &emsp; **(Exercise 14 onward)**
 
 ### Atmosphere Model
-* **Constant air density:** $\rho = \text{const.}$
-* **Altitude-varying air density:** $\rho = f(h)$ *(U.S. Standard Atmosphere 1976)*
+* **Constant air density:** $\rho = \text{const.}$ &emsp; **(Exercise 1 to 4)**
+* **Altitude-varying air density:** $\rho = f(h)$ *(U.S. Standard Atmosphere 1976)* &emsp; **(Exercise 5 onward)**
 
 ### Equations of Motion
 * **Acceleration:** 
@@ -97,7 +98,7 @@ Install the dependencies using the 'requirements.txt' file:
 1) Formulate a 1D model for rocket motion in the absence of outside forces. Using Euler method for numerical integration, compute the velocity of a V2 rocket and compare it with the velocity computed using Tsiolkovsky's rocket equation.
 2) Modify exercise 1 to apply constant gravity and a thrust cutoff when propellant is expended
 3) Apply altitude-dependent gravity, and solve the system of ODEs using midpoint method and 4th order Runge Kutta method
-4) Add in the effects of drag using a constant drag coefficient Cd = 0.125
+4) Add in the effects of drag using a constant drag coefficient $C_d$ = 0.125
 5) Compute air density as a function of altitude using the isothermal barometric formula. Then, simulate the trajectory of the rocket using this altitude-varying air density formula.
 6) Fit speed of sound versus altitude data with piecewise continuous lines. Additionally, fit drag coefficient vs Mach number data (derived from V2 wind tunnel tests) with a natural cubic spline.
 7) Implement the Mach number-varying drag coefficient in the 1D rocket trajectory simulation using the curve fits from the previous exercise.
@@ -124,17 +125,17 @@ Install the dependencies using the 'requirements.txt' file:
     
     Update all plots to show the trajectory colored by the flight phases, and label the phases using a legend.
 
-13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, p(h). Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".\
+13) Refactor the atmospheric model to use the U.S. Standard Atmosphere 1976 specification, then calculate pressure as a function of height, $p(h)$. Update the density, temperature, and speed of sound calculations to use this more accurate atmospheric model. Additionally, update the rocket thrust equation to account for the change in atmospheric pressure, that is, account for the "pressure thrust".\
 \
-The current rocket thrust equation only uses mass flow rate, m_dot, and exhaust velocity, v_exhaust:\
-$$T = m_{dot} * v_{exhaust}$$\
+The current rocket thrust equation only uses mass flow rate, $\dot{m}$, and exhaust velocity, $v_{exhaust}$:\
+$$T = \dot{m} * v_{exhaust}$$\
 \
 A more physically-accurate rocket thrust equation introduces a term to account for the change in atmospheric pressure with altitude:\
-$$T = m_{dot} * v_{exhaust} + (p_{exhaust} - p(h)) * A_{exit}$$\
+$$T = \dot{m} * v_{exhaust} + (p_{exhaust} - p(h)) * A_{exit}$$\
 where\
 $p_{exhaust}$ = engine exhaust gas pressure at the engine exit plane (i.e. at the end of the nozzle)\
-p(h)      = air pressure as a function of altitude h\
-$A_{exit}$    = area at the engine exit plane (i.e. at the end of the nozzle)\
+$p(h)$ = air pressure as a function of altitude h\
+$A_{exit}$ = area at the engine exit plane (i.e. at the end of the nozzle)\
 \
 Update the RocketStage class to have the p_exhaust and A_exit properties required for computing thrust, then update the thrust terms in the get_state_dot() function in the numerical_tools.py file
 
