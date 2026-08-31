@@ -163,3 +163,6 @@ Update the RocketStage class to have the p_exhaust and A_exit properties require
 
 ## Miscellaneous Notes
 * This simulation is implemented in Python since it has syntax that's easy to read and write. This makes the exercises accessible to a broader audience.
+
+## TO DO
+* Exercise 9: make steering angle solver notes and code easier to understand, then reupload notes and code to GitHub
